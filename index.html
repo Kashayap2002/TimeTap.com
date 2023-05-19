@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer and Stopwatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #FFF8DE;
+    }
+    
+    header {
+      background-color: #99A98F;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size:x-large;
+      margin: 0%;
+      color: #FFF8DE;
+      padding: 10px ;
+      margin-top: 0px;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .timer-stopwatch-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    
+    .timer-stopwatch {
+      flex-basis: 45%;
+      background-color: #D6E8DB;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* Add margin bottom to create space */
+      margin-top: 100px;
+    }
+    
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    
+    .display {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #99A98F;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    
+    input[type="number"] {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+    }
+    
+    input[type="number"]::placeholder {
+      color: #999;
+    }
+    
+    input[type="number"]:focus {
+      outline: none;
+      border-color: #4CAF50;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .timer-stopwatch-container {
+        flex-wrap: wrap;
+      }
+    
+      .timer-stopwatch {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>TimeTap</h1>
+    <h6>- Timer & Stopwatch </h6>
+  </header>
+
+  <div class="timer-stopwatch-container">
+    <div class="timer-stopwatch">
+      <h2>Timer</h2>
+      <p id="timer-display" class="display">00:00:00</p>
+      <input type="number" id="timer-input" placeholder="Set time in seconds">
+      <button id="set-timer" class="btn">Set Timer</button>
+      <button id="start-timer" class="btn">Start</button>
+      <button id="pause-timer" class="btn">Pause</button>
+      <button id="reset-timer" class="btn">Reset</button>
+    </div>
+    <div class="timer-stopwatch">
+        <h2>Stopwatch</h2>
+        <p id="stopwatch-display" class="display">00:00:00</p>
+        <button id="start-stopwatch" class="btn">Start</button>
+        <button id="stop-stopwatch" class="btn">Stop</button>
+        <button id="reset-stopwatch" class="btn">Reset</button>
+        <button id="record-stopwatch" class="btn">Record</button>
+        <ul id="record-list"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>      
